@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTW Paywall Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function removeWidget() {
+            document.getElementById('overlayWidget').style.display = 'none';
+            document.getElementById('congratulations').style.display = 'block';
+        }
+    </script>
+</head>
+
+<body>
+<div class="overlay" id="overlayWidget">
+    <div class="card">
+        <div class="card-content">
+            <h2>Bitte Seite freischalten</h2>
+            <p>
+                Der Inhalt dieser Seite ist nur für Premium-Nutzer freigeschaltet. Sie können erst auf weiter klicken, wenn Sie bezahlt haben.
+            </p>
+        </div>
+        <div class="card-buttons">
+            <button class="button button-orange" disabled onclick="removeWidget()">Weiter</button>
+            <button class="button button-orange" onclick="alert('Niemand hat vor eine Bezahlung anzunehmen')">Bezahlen</button>
+        </div>
+    </div>
+</div>
+
+<div id="congratulations" style="display:none;">
+    <h1>Glückwunsch!</h1>
+    <p>Diese Paywall wurde erfolgreich umgangen.</p>
+    <img src="img/htw_logo.jpeg" alt="HTW Berlin Logo" class="logo">
+</div>
+</body>
+
+</html>
